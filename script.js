@@ -1,20 +1,33 @@
-function findOppositeNumber(n, inputNumber){
-    let a = (inputNumber + (n/2)) % n;
-    console.log(a)
-}
-console.log("Ham findOppositeNumber:")
-findOppositeNumber(10,2);
-findOppositeNumber(10,6);
-/*function merge2String(a,b){
-    let a="abc"
-    let b="123"
-    
-    let i = a.length
-    let j = b.length
-    if(i>j){
-        for(k=0;k<j;k++){
-            console.log(a[k]+b[k])
-        }
+var btn = document.getElementById('btn')
+var input = document.getElementById('input')
+var winNoti = document.querySelector('.win')
+var lostNoti = document.querySelector('.lost')
+var outNoti = document.querySelector('.out')
+function check(){
+    if(input.value % 4 == 0){
+        winNoti.style.display='block'
+        setTimeout(function(){
+            winNoti.style.display = 'none'
+        },3000)
+    }
+    else{
+        lostNoti.style.display='block'
+        setTimeout(function(){
+            lostNoti.style.display = 'none'
+        },3000)
     }
 }
-merge2String("abc","123")*/
+input.addEventListener('click',function(e){
+    input.value=''
+})
+let i=0
+btn.addEventListener('click', function (e){
+    i++
+    if(i>3){
+        outNoti.style.display='block'
+    }
+    if(i<=3){
+        check()
+    }
+
+})

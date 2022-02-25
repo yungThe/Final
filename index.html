@@ -5,31 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Entrance test</title>
+    <title>Lucky Number</title>
     <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-
-
-    <nav id="navbar">
-        <ul class="nav">
-            <li class="logo">
-                <a href="#logo">MindX</a>
-            </li>
-            <li class="item">
-                <a href="#contact">Contact</a>
-            </li>
-
-        </ul>
-    </nav>
-
-
-
     <section id="welcome-section" class="welcome-section">
-        <input maxlength='5' placeholder='00000'/>
+        <h1>NHẬP SỐ MAY MẮN TỪ 1 ĐẾN 100</h1>
+        <input id="input" maxlength='3' placeholder='000'/>
         <div class="wrapper">
-            <a class="cta" href="#">
+            <a class="cta" href="#" id="btn">
                 <span>CHECK</span>
                 <span>
                     <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -48,10 +33,24 @@
                     </svg>
                 </span>
             </a>
-        
+        </div>
+        <div class="noti win">
+            <h2>
+                Chúc mừng bạn đã trúng thưởng!
+            </h2>
+        </div>
+        <div class="noti lost">
+            <h2>
+                Chúc bạn may mắn lần sau!
+            </h2>
+        </div>
+        <div class="noti out">
+            <h2>
+                Bạn đã hết lượt chơi!
+            </h2>
+        </div>
     </section>
-
-
+    <script src="./script.js"></script>
 
 </body>
 
