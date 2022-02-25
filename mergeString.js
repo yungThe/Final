@@ -1,45 +1,26 @@
 function merge2String(a,b){
-    let c = a.split('')
-    let d = b.split('')
-    var k = [];
-    if(c.length==d.length){
-        let index =0;
-        for(i=0;i<c.length;i++){
-            k[index] = c[i];
-            k[index++] = d[i];
-            index++; 
-        }
+    const c = a.split('')
+    const d = b.split('')
+    let i=0;
+    let j=0;
+    const k = [];
+    let n =0;
+    while(i<c.length && j<d.length){
+        k[n++] = c[i++]
+        k[n++] = d[j++]
     }
-    if(c.length>d.length){
-        let index =0;
-        let i=0;
-        for(i=0;i<c.length;i++){
-            k[index] = c[i];
-            k[index++] = d[i];
-            index++; 
-        }
-        while(i<d.length){
-            k[index] = c[i]
-            index++
-        }
+    while(j<d.length){
+        k[n++]=d[j++]
     }
-    if(c.length<d.length){
-        let index =0;
-        let i=0;
-        for(i=0;i<c.length;i++){
-            k[index] = c[i];
-            k[index++] = d[i];
-            index++; 
-        }
-        while(i<d.length){
-            k[index] = d[i]
-            index++
-        }
+    while(i<c.length){
+        k[n++]=c[i++]
     }
-    k.toString();
-    console.log(k.join(''));
+    console.log(k)
+   /k.toString()
+    console.log(k.join(''))
+
 }
-merge2String("abc","123")
+merge2String("abc","fdf")
 merge2String("abcd","123")
 merge2String("abc","1234")
 

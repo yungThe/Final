@@ -14,7 +14,7 @@ function check(){
         lostNoti.style.display='block'
         setTimeout(function(){
             lostNoti.style.display = 'none'
-        },3000)
+        },2000)
     }
 }
 input.addEventListener('click',function(e){
