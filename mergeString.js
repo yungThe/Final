@@ -15,10 +15,8 @@ function merge2String(a,b){
     while(i<c.length){
         k[n++]=c[i++]
     }
-    console.log(k)
-   /k.toString()
+    k.toString()
     console.log(k.join(''))
-
 }
 merge2String("abc","fdf")
 merge2String("abcd","123")
